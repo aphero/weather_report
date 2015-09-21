@@ -6,16 +6,26 @@ class CurrentCondition
     @response = get_response
   end
 
-  def your_local_forecast
-    @response
+  def location
+    @response["current_observation"]["display_location"]["full"]
+  end
+
+  def temp
+    @response["current_observation"]["temp_f"]
+  end
+
+  def rel_humidity
+    @response["current_observation"]["relative_humidity"]
+  end
+
+  def wind
+    "#{@response["current_observation"]["wind_dir"]} @ #{@response["current_observation"]["wind_mph"]} mph"
   end
 
   private def get_response
-    key = ENV['WUNDERGROUND_KEY']
-    HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('current.json')
+    data_hash = JSON.parse(file)
   end
 end
-
-puts "Enter a ZIP:"
-api = CurrentCondition.new(gets.chomp)
-puts api.your_local_forecast

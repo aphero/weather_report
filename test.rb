@@ -1,10 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './current_condition.rb'
-require './ten_day.rb'
-require './sun_rise_set.rb'
-require './alert.rb'
-require './hurricane.rb'
+require './core.rb'
 
 class WeatherReportTest < Minitest::Test
 
@@ -28,7 +24,23 @@ class WeatherReportTest < Minitest::Test
     assert TenDay.new()
   end
 
-  def test_get_data_06
-    assert CurrentCondition.new(27278)
+  def test_get_location_06
+    loc = CurrentCondition.new(27278)
+    assert_equal loc.location, "Hillsborough, NC"
+  end
+
+  def test_get_temp
+    loc = CurrentCondition.new(27278)
+    assert_equal loc.temp, 68.2
+  end
+
+  def test_get_humidity
+    loc = CurrentCondition.new(27278)
+    assert_equal loc.rel_humidity, "85%"
+  end
+
+  def test_get_wind
+    loc = CurrentCondition.new(27278)
+    assert_equal loc.wind, "NNE @ 4.0 mph"
   end
 end

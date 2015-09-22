@@ -1,6 +1,12 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './core.rb'
+require './current_condition.rb'
+require './ten_day.rb'
+require './sun_rise_set.rb'
+require './alert.rb'
+require './hurricane.rb'
+require 'json'
+require 'httparty'
 
 class TenDay
   private def get_response

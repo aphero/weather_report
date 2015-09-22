@@ -22,7 +22,5 @@ class Alert
   private def get_response
     key = ENV['WUNDERGROUND_KEY']
     HTTParty.get("http://api.wunderground.com/api/#{key}/alerts/q/#{@zip}.json")
-    # file = File.read('alerts.json')
-    # data_hash = JSON.parse(file)
   end
 end

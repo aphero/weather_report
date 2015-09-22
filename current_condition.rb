@@ -1,4 +1,4 @@
-# require 'httparty'
+require 'httparty'
 
 class CurrentCondition
   def initialize(zip)
@@ -25,7 +25,5 @@ class CurrentCondition
   private def get_response
     key = ENV['WUNDERGROUND_KEY']
     HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/#{@zip}.json")
-    # file = File.read('current.json')
-    # data_hash = JSON.parse(file)
   end
 end

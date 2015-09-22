@@ -21,7 +21,5 @@ class SunRiseSet
   private def get_response
     key = ENV['WUNDERGROUND_KEY']
     HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
-    # file = File.read('astronomy.json')
-    # data_hash = JSON.parse(file)
   end
 end

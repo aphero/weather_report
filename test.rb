@@ -17,7 +17,7 @@ class WeatherReportTest < Minitest::Test
   end
 
   def test_sun_rise_set_04
-    assert SunRiseSet.new()
+    assert SunRiseSet.new(27278)
   end
 
   def test_ten_day_exists_05
@@ -115,7 +115,8 @@ Partly cloudy skies early followed by increasing clouds with showers developing 
 "
   end
 
-  # def test_
-  #
-  # end
+  def test_sunrise
+    loc = SunRiseSet.new(27278)
+    assert_equal loc.sunrise, "7:03"
+  end
 end

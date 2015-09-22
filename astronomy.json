@@ -1,37 +1,37 @@
 {
   "response": {
-  "version":"0.1",
-  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
-  "features": {
-  "astronomy": 1
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "astronomy": 1
+    }
+  },
+  "moon_phase": {
+    "percentIlluminated": "55",
+    "ageOfMoon": "8",
+    "phaseofMoon": "First Quarter",
+    "hemisphere": "North",
+    "current_time": {
+      "hour": "16",
+      "minute": "28"
+    },
+    "sunrise": {
+      "hour": "7",
+      "minute": "03"
+    },
+    "sunset": {
+      "hour": "19",
+      "minute": "15"
+    }
+  },
+  "sun_phase": {
+    "sunrise": {
+      "hour": "7",
+      "minute": "03"
+    },
+    "sunset": {
+      "hour": "19",
+      "minute": "15"
+    }
   }
-	}
-		,	"moon_phase": {
-		"percentIlluminated":"55",
-		"ageOfMoon":"8",
-		"phaseofMoon":"First Quarter",
-		"hemisphere":"North",
-		"current_time": {
-		"hour":"16",
-		"minute":"28"
-		},
-		"sunrise": {
-		"hour":"7",
-		"minute":"03"
-		},
-		"sunset": {
-		"hour":"19",
-		"minute":"15"
-		}
-	},
-	"sun_phase": {
-		"sunrise": {
-		"hour":"7",
-		"minute":"03"
-		},
-		"sunset": {
-		"hour":"19",
-		"minute":"15"
-		}
-	}
 }

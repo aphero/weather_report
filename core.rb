@@ -3,7 +3,8 @@ require './ten_day.rb'
 require './sun_rise_set.rb'
 require './alert.rb'
 require './hurricane.rb'
-require 'json'
+# require './test.rb'
+# require 'json'
 
 puts "Enter a ZIP:"
 zip = gets.chomp

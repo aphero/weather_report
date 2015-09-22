@@ -1,4 +1,6 @@
 require 'httparty'
+require 'byebug'
+require 'json'
 
 class CurrentCondition
   def initialize(zip)

@@ -7,7 +7,7 @@ class Alert
   end
 
   def alerts?
-    @response["alerts"] != "[]"
+    @response["alerts"] != []
   end
 
   def alert_report

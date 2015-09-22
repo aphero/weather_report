@@ -20,6 +20,6 @@ class Hurricane
 
   private def get_response
     key = ENV['WUNDERGROUND_KEY']
-    HTTParty.get("http://api.wunderground.com/api/#{key}/currenthurricane/q/#{@zip}.json")
+    HTTParty.get("http://api.wunderground.com/api/#{key}/currenthurricane/q/view.json")
   end
 end

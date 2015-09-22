@@ -1,4 +1,4 @@
-require 'httparty'
+# require 'httparty'
 
 class CurrentCondition
   def initialize(zip)

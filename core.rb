@@ -6,11 +6,14 @@ require './hurricane.rb'
 require 'json'
 require 'httparty'
 
-puts "Enter a ZIP:"
-api = CurrentCondition.new(gets.chomp)
-puts "===================="
-puts "Current conditions for #{api.location}"
-puts "Temperature: #{api.temp} F"
-puts "rH: #{api.rel_humidity}"
-puts "Wind: #{api.wind}"
-puts "===================="
+# puts "Enter a ZIP:"
+# api = CurrentCondition.new(gets.chomp)
+# # zip = gets.chomp
+# # api = CurrentCondition.new(zip)
+# puts "===================="
+# puts "Current conditions for #{api.location}"
+# puts "Temperature: #{api.temp} F"
+# puts "rH: #{api.rel_humidity}"
+# puts "Wind: #{api.wind}"
+# puts "===================="
+# # sunrise = SunRiseSet.new(zip)

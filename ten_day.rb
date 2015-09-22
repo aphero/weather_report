@@ -22,9 +22,9 @@ class TenDay
   end
 
   private def get_response
-    # key = ENV['WUNDERGROUND_KEY']
-    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
-    file = File.read('10day.json')
-    data_hash = JSON.parse(file)
+    key = ENV['WUNDERGROUND_KEY']
+    HTTParty.get("http://api.wunderground.com/api/#{key}/forecast10day/q/#{@zip}.json")
+    # file = File.read('10day.json')
+    # data_hash = JSON.parse(file)
   end
 end

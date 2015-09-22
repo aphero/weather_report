@@ -2,6 +2,51 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './core.rb'
 
+class TenDay
+  private def get_response
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('10day.json')
+    data_hash = JSON.parse(file)
+  end
+end
+
+class CurrentCondition
+  private def get_response
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('current.json')
+    data_hash = JSON.parse(file)
+  end
+end
+
+class SunRiseSet
+  private def get_response
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('astronomy.json')
+    data_hash = JSON.parse(file)
+  end
+end
+
+class Alert
+  private def get_response
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('alerts.json')
+    data_hash = JSON.parse(file)
+  end
+end
+
+class Hurricane
+  private def get_response
+    # key = ENV['WUNDERGROUND_KEY']
+    # HTTParty.get("http://api.wunderground.com/api/#{key}/astronomy/q/#{@zip}.json")
+    file = File.read('hurricane.json')
+    data_hash = JSON.parse(file)
+  end
+end
+
 class WeatherReportTest < Minitest::Test
 
   def test_alert_exists_01
